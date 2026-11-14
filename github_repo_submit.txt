@@ -1,4 +1,4 @@
-﻿GitHub Repository Link: https://github.com/taliasemaan/lab9-profiling-in-python
+GitHub Repository Link: https://github.com/taliasemaan/lab9-profiling-in-python
 
 This work is solo.
 
@@ -6,5 +6,3 @@ Share your work on GitHub with:
 - NourSN2004
 - HusseinMoukalled
 - RanimTahmoush
-
-Replace the placeholder repository URL above with your actual GitHub repo link before submitting.
