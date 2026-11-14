@@ -3,7 +3,11 @@ import unittest
 
 import memory_profiler
 
-from optimized_profiler import fast_function, memory_intensive_function, slow_function
+from optimized_profiler import (
+    memory_intensive_function,
+    optimized_fast_function,
+    slow_function,
+)
 
 
 class TestOptimizedProfiler(unittest.TestCase):
@@ -19,9 +23,11 @@ class TestOptimizedProfiler(unittest.TestCase):
         self.assertGreater(duration, 2, "slow_function should take more than 2 seconds.")
 
     def test_fast_function(self):
-        duration = self.time_function(fast_function)
-        print(f"fast_function executed in {duration:.2f} seconds.")
-        self.assertLess(duration, 1, "fast_function should take less than 1 second.")
+        duration = self.time_function(optimized_fast_function)
+        print(f"optimized_fast_function executed in {duration:.2f} seconds.")
+        self.assertLess(
+            duration, 1, "optimized_fast_function should take less than 1 second."
+        )
 
     def test_memory_intensive_function(self):
         mem_usage_before = memory_profiler.memory_usage()[0]

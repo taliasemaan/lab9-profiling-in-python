@@ -1,17 +1,21 @@
 from line_profiler import LineProfiler
-from optimized_profiler import slow_function, fast_function, memory_intensive_function
+from optimized_profiler import (
+    slow_function,
+    optimized_fast_function,
+    memory_intensive_function,
+)
 
 
 def main():
     slow_function()
-    fast_function()
+    optimized_fast_function()
     memory_intensive_function()
 
 
 def profile_main():
     profiler = LineProfiler()
     profiler.add_function(slow_function)
-    profiler.add_function(fast_function)
+    profiler.add_function(optimized_fast_function)
     profiler.add_function(memory_intensive_function)
     profiler.runcall(main)
     profiler.print_stats()
